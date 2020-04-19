@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+     function iCanDivide(num) {
+            let arr = new Array;
+            let newRep;
+            for (let i = 1; i <= num; i++) {
+                if (i % 2 === 0 && i % 3 === 0 && i % 5 === 0) {
+                    newRep = 'yu-gi-oh';
+                }
+                else if (i % 2 === 0 && i % 3 === 0) {
+                    newRep = 'yu-gi';
+                }
+                else if (i % 3 === 0 && i % 5 === 0) {
+                    newRep = 'gi-oh';
+                }
+                else if (i % 2 === 0 && i % 5 === 0) {
+                    newRep = 'yu-oh';
+                }
+                else if (i % 2 === 0) {
+                    newRep = 'yu';
+                }
+                else if (i % 3 === 0) {
+                    newRep = 'gi';
+                }
+                else if (i % 5 === 0) {
+                    newRep = 'oh';
+                }
+                else {
+                    newRep = i;
+                }
+                arr.push(newRep);
+            }
+                    return arr;
+        }
+        iCanDivide(100);
+        iCanDivide(30);
+        console.log(iCanDivide(50)) ;
+     
+ </script>
+</body>
+</html>
